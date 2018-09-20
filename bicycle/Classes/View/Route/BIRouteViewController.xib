@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BIRouteViewController" customModule="bicycle" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="FmJ-2s-fMI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y83-As-XR5">
+                    <rect key="frame" x="16" y="42" width="343" height="166"/>
+                    <color key="backgroundColor" red="0.22557970591111109" green="0.67997198173055562" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="166" id="YfU-0c-1VV"/>
+                    </constraints>
+                    <state key="normal" title="Join events">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="joinEvent:" destination="-1" eventType="touchUpInside" id="Kyn-jV-8qY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojN-4N-xxd">
+                    <rect key="frame" x="16" y="229" width="343" height="166"/>
+                    <color key="backgroundColor" red="0.21258599931388888" green="0.69689906506388899" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="166" id="npk-6O-hhX"/>
+                    </constraints>
+                    <state key="normal" title="Host events">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="hostEvent:" destination="-1" eventType="touchUpInside" id="hXN-Zy-Lb8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="y83-As-XR5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="22" id="9gK-72-pyk"/>
+                <constraint firstItem="y83-As-XR5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="B6W-jF-huL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="y83-As-XR5" secondAttribute="trailing" constant="16" id="Um6-bt-02j"/>
+                <constraint firstItem="ojN-4N-xxd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="pkl-Gb-9Jz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ojN-4N-xxd" secondAttribute="trailing" constant="16" id="ySG-xP-YOl"/>
+                <constraint firstItem="ojN-4N-xxd" firstAttribute="top" secondItem="y83-As-XR5" secondAttribute="bottom" constant="21" id="yhj-DZ-TNm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

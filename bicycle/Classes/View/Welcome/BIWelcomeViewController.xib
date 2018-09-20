@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BIWelcomeViewController" customModule="bicycle" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="KhG-OX-jGs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Route Route" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw4-cW-NXW">
+                    <rect key="frame" x="36" y="127" width="303" height="115"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85d-Jr-jxe">
+                    <rect key="frame" x="36" y="338" width="303" height="45"/>
+                    <color key="backgroundColor" red="0.33725490196078434" green="0.59607843137254901" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="eIm-wN-DRt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Signup">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="signup:" destination="-1" eventType="touchUpInside" id="ngy-lu-aAA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynx-NC-x5v">
+                    <rect key="frame" x="36" y="399" width="303" height="45"/>
+                    <color key="backgroundColor" red="0.33725490200000002" green="0.59607843140000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="OYe-dD-Pqm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="pFW-ox-u3z"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Bw4-cW-NXW" secondAttribute="trailing" constant="36" id="3Fe-zb-J7r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="85d-Jr-jxe" secondAttribute="trailing" constant="36" id="3YD-Zb-uG8"/>
+                <constraint firstItem="85d-Jr-jxe" firstAttribute="top" secondItem="Bw4-cW-NXW" secondAttribute="bottom" constant="96" id="8ya-5B-cPT"/>
+                <constraint firstItem="Bw4-cW-NXW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="107" id="EjY-Pm-Ojb"/>
+                <constraint firstItem="85d-Jr-jxe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="L8z-fk-GUA"/>
+                <constraint firstItem="ynx-NC-x5v" firstAttribute="top" secondItem="85d-Jr-jxe" secondAttribute="bottom" constant="16" id="Tcy-0D-Q41"/>
+                <constraint firstItem="ynx-NC-x5v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="ZC4-5m-cGF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ynx-NC-x5v" secondAttribute="trailing" constant="36" id="caT-5a-Ru6"/>
+                <constraint firstItem="Bw4-cW-NXW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="tUm-N0-OEz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
