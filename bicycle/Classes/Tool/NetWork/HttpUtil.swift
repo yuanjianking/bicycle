@@ -11,6 +11,8 @@ import AFNetworking
 
 class HttpUtil: AFHTTPSessionManager {
 
+    let baseUrl = "http://192.168.60.158:8888/"
+    
     enum HTTPMethod {
         case GET
         case POST
@@ -31,7 +33,7 @@ class HttpUtil: AFHTTPSessionManager {
     }()
     
     func request(methodType:HTTPMethod, urlString:String, parameters: [String:AnyObject]?, resultBlock:@escaping(Any?,Error?)->()) {
-        let url = "http://192.168.60.158:8888/" + urlString;
+        let url = baseUrl + urlString;
         // If the request succeeds, then the error is nil.
         let successBlock = { (task:URLSessionDataTask, responseObj:Any?)in
             resultBlock(responseObj,nil)
