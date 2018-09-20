@@ -41,10 +41,16 @@ class BILoginViewController: BIBaseViewController {
         user.userName = self.userName.text;
         user.password = self.password.text;
         
-        loginModel.login(user: user)
+        loginModel.login(user: user){(result: LoginResult)->() in
+            if result.code == 1{
+                CBToast.showToastAction(message: "login success")
+                let vc = BIRouteViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else{
+                CBToast.showToastAction(message: "login error")
+            }
+        }
         
-        let vc = BIRouteViewController()
-        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

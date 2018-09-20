@@ -15,6 +15,8 @@ class BISignupViewController: BIBaseViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    private lazy var loginModel = LoginResultModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -34,6 +36,21 @@ class BISignupViewController: BIBaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+    @IBAction func signup(_ sender: UIButton) {
+        let user = User.init()
+        user.name = self.name.text;
+        user.email = self.email.text;
+        user.userName = self.userName.text;
+        user.password = self.password.text;
+        
+        loginModel.signup(user: user){(result: LoginResult)->() in
+            if result.code == 1{
+                CBToast.showToastAction(message: "signup success")
+            }else{
+                CBToast.showToastAction(message: "signup error")
+            }
+        }
+    }
 }
 
 extension BISignupViewController{

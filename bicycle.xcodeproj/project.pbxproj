@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		361E9B762148BF8B00A02C87 /* BISendRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361E9B752148BF8B00A02C87 /* BISendRouteViewController.swift */; };
 		361E9B782148BFA300A02C87 /* BISendRouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361E9B772148BFA300A02C87 /* BISendRouteViewController.xib */; };
+		361F11F9215365C400E164FC /* CBToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F11F8215365C400E164FC /* CBToast.swift */; };
+		361F11FD21536A2300E164FC /* LoginResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F11FC21536A2300E164FC /* LoginResultModel.swift */; };
 		36B23E3E2146166700D229E1 /* BIMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B23E3D2146166700D229E1 /* BIMainViewController.swift */; };
 		36B23E40214616EB00D229E1 /* BINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B23E3F214616EB00D229E1 /* BINavigationController.swift */; };
 		36B23E422146174000D229E1 /* BIBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B23E412146174000D229E1 /* BIBaseViewController.swift */; };
@@ -43,7 +45,6 @@
 		36D294BD2147C2230012E035 /* BIRouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D294BC2147C2230012E035 /* BIRouteDetailViewController.swift */; };
 		36D294BF2147C23A0012E035 /* BIRouteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D294BE2147C23A0012E035 /* BIRouteDetailViewController.xib */; };
 		36D3373B214B8FEA00225EAF /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3373A214B8FEA00225EAF /* LoginResult.swift */; };
-		36D3373D214B912B00225EAF /* LoginResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3373C214B912B00225EAF /* LoginResultModel.swift */; };
 		36D3373F214B916800225EAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3373E214B916800225EAF /* User.swift */; };
 		36E8AE982146022100036DF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8AE972146022100036DF9 /* AppDelegate.swift */; };
 		36E8AE9F2146022200036DF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E8AE9E2146022200036DF9 /* Assets.xcassets */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		361E9B752148BF8B00A02C87 /* BISendRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BISendRouteViewController.swift; sourceTree = "<group>"; };
 		361E9B772148BFA300A02C87 /* BISendRouteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BISendRouteViewController.xib; sourceTree = "<group>"; };
+		361F11F8215365C400E164FC /* CBToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBToast.swift; sourceTree = "<group>"; };
+		361F11FC21536A2300E164FC /* LoginResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResultModel.swift; sourceTree = "<group>"; };
 		36B23E3D2146166700D229E1 /* BIMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIMainViewController.swift; sourceTree = "<group>"; };
 		36B23E3F214616EB00D229E1 /* BINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BINavigationController.swift; sourceTree = "<group>"; };
 		36B23E412146174000D229E1 /* BIBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIBaseViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +105,6 @@
 		36D294BC2147C2230012E035 /* BIRouteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIRouteDetailViewController.swift; sourceTree = "<group>"; };
 		36D294BE2147C23A0012E035 /* BIRouteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIRouteDetailViewController.xib; sourceTree = "<group>"; };
 		36D3373A214B8FEA00225EAF /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
-		36D3373C214B912B00225EAF /* LoginResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResultModel.swift; sourceTree = "<group>"; };
 		36D3373E214B916800225EAF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		36E8AE942146022100036DF9 /* bicycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bicycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E8AE972146022100036DF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 				361E9B772148BFA300A02C87 /* BISendRouteViewController.xib */,
 			);
 			path = SendRoute;
+			sourceTree = "<group>";
+		};
+		361F11F72153659100E164FC /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				361F11F8215365C400E164FC /* CBToast.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		36B23E4521461B1D00D229E1 /* Additions */ = {
@@ -278,7 +288,7 @@
 		36E8AEAA21460D5800036DF9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				36D3373C214B912B00225EAF /* LoginResultModel.swift */,
+				361F11FC21536A2300E164FC /* LoginResultModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -338,6 +348,7 @@
 		36E8AEB021460D5800036DF9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				361F11F72153659100E164FC /* Toast */,
 				36CAF4502148A05E0006C644 /* NetWork */,
 				36B23E6C2146358A00D229E1 /* Extensions */,
 				36B23E4521461B1D00D229E1 /* Additions */,
@@ -494,6 +505,7 @@
 				36B23E3E2146166700D229E1 /* BIMainViewController.swift in Sources */,
 				361E9B762148BF8B00A02C87 /* BISendRouteViewController.swift in Sources */,
 				36B23E6621461B1D00D229E1 /* NSObject+CZRuntime.m in Sources */,
+				361F11FD21536A2300E164FC /* LoginResultModel.swift in Sources */,
 				36D3373F214B916800225EAF /* User.swift in Sources */,
 				36CAF4522148A0C50006C644 /* HttpUtil.swift in Sources */,
 				36B23E76214651D900D229E1 /* UIImage+Extensions.swift in Sources */,
@@ -501,12 +513,12 @@
 				36B23E8A214683F600D229E1 /* BISignupViewController.swift in Sources */,
 				36B23E40214616EB00D229E1 /* BINavigationController.swift in Sources */,
 				36D294BA2147860A0012E035 /* FrameUtils.swift in Sources */,
-				36D3373D214B912B00225EAF /* LoginResultModel.swift in Sources */,
 				36D294B4214754CA0012E035 /* BIRouteViewController.swift in Sources */,
 				36B23E6A21461B1D00D229E1 /* NSArray+Log.m in Sources */,
 				36D3373B214B8FEA00225EAF /* LoginResult.swift in Sources */,
 				36B23E8F21468D1100D229E1 /* BIWelcomeViewController.swift in Sources */,
 				36D294BD2147C2230012E035 /* BIRouteDetailViewController.swift in Sources */,
+				361F11F9215365C400E164FC /* CBToast.swift in Sources */,
 				36B23E6921461B1D00D229E1 /* NSAttributedString+CZAdditon.m in Sources */,
 				36B23E6121461B1D00D229E1 /* UIScreen+CZAddition.m in Sources */,
 				36B23E732146519000D229E1 /* UIBarButtonItem+Extensions.swift in Sources */,

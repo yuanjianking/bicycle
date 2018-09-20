@@ -10,14 +10,15 @@ import Foundation
 
 class LoginResultModel{
     
-    func login(user: User){
+    func login(user: User, completion: @escaping (_ result: LoginResult) -> ()){
         let urlString = "login"
         
         HttpUtil.shareInstance.request(methodType: HttpUtil.HTTPMethod.POST, urlString: urlString, parameters: convertStringToDictionary(text: user.yy_modelToJSONString()!), resultBlock: {(json, err) in
             if err != nil{
-                print(err)
+                print(err as Any)
+                completion(LoginResult.init())
             }else{
-                print(json)
+                print(json as Any)
                 // 字典转模型
                 let loginResult: LoginResult = LoginResult(dict: json as! [String : AnyObject])
                 print(String(loginResult.code) + loginResult.message!)
@@ -26,9 +27,26 @@ class LoginResultModel{
                 let r = LoginResult()
                 r.yy_modelSet(with: json as! [String : AnyObject])
                 
-                print(r.content?.email)
-                print(r.content?._id)
-                
+                print(r.content?.email as Any)
+                print(r.content?._id as Any)
+                completion(loginResult)
+            }
+        })
+    }
+    
+    func signup(user: User, completion: @escaping (_ result: LoginResult)->()){
+        let urlString = "signup"
+        
+        HttpUtil.shareInstance.request(methodType: HttpUtil.HTTPMethod.POST, urlString: urlString, parameters: convertStringToDictionary(text: user.yy_modelToJSONString()!), resultBlock: {(json, err) in
+            if err != nil{
+                print(err as Any)
+                completion(LoginResult.init())
+            }else{
+                print(json as Any)
+                // 字典转模型
+                let loginResult: LoginResult = LoginResult(dict: json as! [String : AnyObject])
+                print(String(loginResult.code) + loginResult.message!)
+                completion(loginResult)
             }
         })
     }
